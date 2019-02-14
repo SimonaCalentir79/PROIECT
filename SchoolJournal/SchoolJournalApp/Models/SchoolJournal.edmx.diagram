@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="331bab77454f492bb88d0026af2c59e5" Name="Diagram1">
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.GradeCategory" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Grades" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Homework" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Persons" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Semesters" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Students" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Subjects" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCHOOLJOURNALModel.Teachers" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Grades_CategoryID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Grades_SemesterID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Grades_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Grades_SubjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Homework_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Homework_SubjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Students_PersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Teachers_PersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="SCHOOLJOURNALModel.FK_Subjects_TeacherID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

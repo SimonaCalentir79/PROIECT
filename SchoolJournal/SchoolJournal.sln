@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournalApp", "SchoolJournalApp\SchoolJournalApp.csproj", "{2E8338EF-25F3-4AB1-8100-22A863EE6C65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournalDBAccess", "SchoolJournalDBAccess\SchoolJournalDBAccess.csproj", "{941CA13F-4937-40D4-BD4A-B019E2189F76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E8338EF-25F3-4AB1-8100-22A863EE6C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8338EF-25F3-4AB1-8100-22A863EE6C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8338EF-25F3-4AB1-8100-22A863EE6C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8338EF-25F3-4AB1-8100-22A863EE6C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{941CA13F-4937-40D4-BD4A-B019E2189F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941CA13F-4937-40D4-BD4A-B019E2189F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941CA13F-4937-40D4-BD4A-B019E2189F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941CA13F-4937-40D4-BD4A-B019E2189F76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B26D692-65D0-4BDC-893E-805CDF0B4EA9}
+	EndGlobalSection
+EndGlobal

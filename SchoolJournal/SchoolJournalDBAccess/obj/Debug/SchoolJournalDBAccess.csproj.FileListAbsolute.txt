@@ -1,0 +1,11 @@
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\SchoolJournalDBAccess.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\SchoolJournalDBAccess.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\System.Security.AccessControl.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\System.Security.Permissions.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\bin\Debug\System.Security.Principal.Windows.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\obj\Debug\SchoolJournalDBAccess.csprojAssemblyReference.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\obj\Debug\SchoolJournalDBAccess.csproj.CoreCompileInputs.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\obj\Debug\SchoolJournalDBAccess.csproj.CopyComplete
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\obj\Debug\SchoolJournalDBAccess.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\TEME\PROIECT\SchoolJournal\SchoolJournalDBAccess\obj\Debug\SchoolJournalDBAccess.pdb
