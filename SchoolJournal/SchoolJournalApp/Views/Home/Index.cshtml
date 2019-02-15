@@ -3,30 +3,23 @@
 <div>
     Number of persons: @Model.Count <br /><br />
 
-    <table style="width:100%">
+    <table style="width:75%">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Phone</th>
-                <th>Address</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var pers in Model)
             {
-                <tr>
-                    <td>@pers.PersonID</td>
-                    <td>@pers.PersonName</td>
-                    <td>@pers.PersonEmail</td>
-                    <td>@pers.PersonPhone</td>
-                    <td>@pers.PersonAddress</td>
-                </tr>
+            <tr>
+                <td>@pers.PersonName</td>
+                <td>@pers.PersonEmail</td>
+                <td>@Html.ActionLink("Details", "Details", "Home", new { @id = pers.PersonID }, null)</td>
+                <td>@Html.ActionLink("Edit", "Add", "Home", new { @id = pers.PersonID }, null)</td>
+            </tr>
             }
         </tbody>
     </table>
-    <br />
-
-    @Html.ActionLink("New person","Add","Home")
 </div>

@@ -23,5 +23,33 @@ namespace SchoolJournalApp.Controllers
 
             return View(persons);
         }
+
+        public ActionResult Details(int id)
+        {
+            var person = manager.Get(id);
+            return View(person);
+        }
+
+        [HttpGet]
+        public ActionResult Add(int id)
+        {
+            if (id == 0)
+                return View();
+
+            var person = manager.Get(id);
+            return View(person);
+        }
+
+        [HttpPost]
+        public ActionResult Add(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                //manager.Save(person);
+                return Redirect("Index");
+            }
+
+            return View(person);
+        }
     }
 }

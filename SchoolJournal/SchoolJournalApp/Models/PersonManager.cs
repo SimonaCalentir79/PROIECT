@@ -22,10 +22,14 @@ namespace SchoolJournalApp.Models
                 personList.Add(new Person
                 {
                     PersonID = (int)personsReader[0],
-                    PersonName = (string)personsReader[1],
-                    PersonEmail = (string)personsReader[2],
-                    PersonPhone = (string)personsReader[3],
-                    PersonAddress = (string)personsReader[4]
+                    PersonName = (personsReader[1] == DBNull.Value) ? string.Empty : (string)personsReader[1],
+                    PersonEmail = (personsReader[2] == DBNull.Value) ? string.Empty : (string)personsReader[2],
+                    PersonPhone = (personsReader[3] == DBNull.Value) ? string.Empty : (string)personsReader[3],
+                    PersonAddress = (personsReader[4] == DBNull.Value) ? string.Empty : (string)personsReader[4]
+                    //PersonName = (string)personsReader[1],
+                    //PersonEmail = (string)personsReader[2],
+                    //PersonPhone = (string)personsReader[3],
+                    //PersonAddress = (string)personsReader[4]
                 });
             }
             DBAccess.CloseConnection(conn);
@@ -57,13 +61,13 @@ namespace SchoolJournalApp.Models
             return (int)addNewPerson.ExecuteScalar();
         }
 
-        void IPersonManager.Save(Person person)
+        public void Save(Person person)
         {
             //personList.Add(person);
             var newPerson = new Person(DBAccess.ConexiuneCurenta, person.PersonName, person.PersonEmail, person.PersonPhone, person.PersonAddress);
         }
 
-        Person IPersonManager.Get(int id)
+        public Person Get(int id)
         {
             foreach (var pers in personList)
                 if (pers.PersonID == id)
@@ -71,7 +75,7 @@ namespace SchoolJournalApp.Models
             return null;
         }
 
-        IList<Person> IPersonManager.GetAll()
+        public IList<Person> GetAll()
         {
             return personList;
         }

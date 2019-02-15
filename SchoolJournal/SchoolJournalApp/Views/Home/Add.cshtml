@@ -1,10 +1,5 @@
 ﻿@model SchoolJournalApp.Models.Person
 
-@{
-    ViewBag.Title = "Add";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 <div>
     <h3>Add new person</h3>
 
@@ -33,6 +28,11 @@
             @Html.TextBoxFor(m => m.PersonAddress, null, new { @class = "form-control" })
             @Html.ValidationMessageFor(m => m.PersonAddress)
         </div>
+
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <p>
+            @Html.ActionLink("Cancel", "Index", "Home")
+        </p>
     }
 </div>
 
