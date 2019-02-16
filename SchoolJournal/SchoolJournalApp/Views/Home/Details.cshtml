@@ -1,10 +1,12 @@
-﻿@model SchoolJournalApp.Models.Person
+﻿@model SchoolJournalModels.Persons
 
 <div>
-    <h3>@Model.PersonName</h3>
-    <h5>@Model.PersonEmail</h5>
-    <h5>@Model.PersonPhone</h5>
-    <h5>@Model.PersonAddress</h5>
+    <p>ID: @Model.PersonID</p>
+    <h3>Name: @Model.PersonName</h3>
+
+    <p>E-mail: @Model.PersonEmail</p>
+    <p>Phone: @Model.PersonPhone</p>
+    <p>Address: @Model.PersonAddress</p>
     <br />
-    <h5>@Html.ActionLink("Back","Index","Home")</h5>
+    <p>@Html.ActionLink("Back", "Index", "Home")</p>
 </div>

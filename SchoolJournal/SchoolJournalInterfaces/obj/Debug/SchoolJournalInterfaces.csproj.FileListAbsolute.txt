@@ -1,0 +1,14 @@
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalInterfaces.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalInterfaces.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalDataAccess.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalModels.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\EntityFramework.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalDataAccess.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalDataAccess.dll.config
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\SchoolJournalModels.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\bin\Debug\EntityFramework.xml
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\obj\Debug\SchoolJournalInterfaces.csprojAssemblyReference.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\obj\Debug\SchoolJournalInterfaces.csproj.CoreCompileInputs.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\obj\Debug\SchoolJournalInterfaces.csproj.CopyComplete
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\obj\Debug\SchoolJournalInterfaces.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalInterfaces\obj\Debug\SchoolJournalInterfaces.pdb

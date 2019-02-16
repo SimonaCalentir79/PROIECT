@@ -1,0 +1,14 @@
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\SchoolJournalDataAccess.dll.config
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\SchoolJournalDataAccess.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\SchoolJournalDataAccess.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\EntityFramework.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\SchoolJournalModels.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\SchoolJournalModels.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\EntityFramework.xml
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\obj\Debug\SchoolJournalDataAccess.csprojAssemblyReference.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\obj\Debug\SchoolJournalDataAccess.csproj.CoreCompileInputs.cache
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\obj\Debug\SchoolJournalDataAccess.csproj.CopyComplete
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\obj\Debug\SchoolJournalDataAccess.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalDataAccess\obj\Debug\SchoolJournalDataAccess.pdb

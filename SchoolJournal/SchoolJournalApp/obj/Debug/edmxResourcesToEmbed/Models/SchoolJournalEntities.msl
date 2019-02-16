@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SchoolJournalModelStoreContainer" CdmEntityContainer="SchoolJournalEntities">
+    <EntitySetMapping Name="GradeCategory">
+      <EntityTypeMapping TypeName="SchoolJournalModel.GradeCategory">
+        <MappingFragment StoreEntitySet="GradeCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Share" ColumnName="Share" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Grades">
+        <MappingFragment StoreEntitySet="Grades">
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="DateOfGrade" ColumnName="DateOfGrade" />
+          <ScalarProperty Name="Observations" ColumnName="Observations" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homework">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Homework">
+        <MappingFragment StoreEntitySet="Homework">
+          <ScalarProperty Name="HomeworkID" ColumnName="HomeworkID" />
+          <ScalarProperty Name="DateOfHomework" ColumnName="DateOfHomework" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="PersonEmail" ColumnName="PersonEmail" />
+          <ScalarProperty Name="PersonPhone" ColumnName="PersonPhone" />
+          <ScalarProperty Name="PersonAddress" ColumnName="PersonAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Semesters">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Semesters">
+        <MappingFragment StoreEntitySet="Semesters">
+          <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+          <ScalarProperty Name="SemesterNumber" ColumnName="SemesterNumber" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Students">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Subjects">
+        <MappingFragment StoreEntitySet="Subjects">
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="LevelYear" ColumnName="LevelYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="SchoolJournalModel.Teachers">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_Grades_CategoryID" TypeName="SchoolJournalModel.FK_Grades_CategoryID" StoreEntitySet="Grades">
+      <EndProperty Name="GradeCategory">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <EndProperty Name="Grades">
+        <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Grades_SemesterID" TypeName="SchoolJournalModel.FK_Grades_SemesterID" StoreEntitySet="Grades">
+      <EndProperty Name="Semesters">
+        <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+      </EndProperty>
+      <EndProperty Name="Grades">
+        <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Grades_StudentID" TypeName="SchoolJournalModel.FK_Grades_StudentID" StoreEntitySet="Grades">
+      <EndProperty Name="Students">
+        <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+      </EndProperty>
+      <EndProperty Name="Grades">
+        <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Grades_SubjectID" TypeName="SchoolJournalModel.FK_Grades_SubjectID" StoreEntitySet="Grades">
+      <EndProperty Name="Subjects">
+        <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+      </EndProperty>
+      <EndProperty Name="Grades">
+        <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Homework_StudentID" TypeName="SchoolJournalModel.FK_Homework_StudentID" StoreEntitySet="Homework">
+      <EndProperty Name="Students">
+        <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+      </EndProperty>
+      <EndProperty Name="Homework">
+        <ScalarProperty Name="HomeworkID" ColumnName="HomeworkID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Homework_SubjectID" TypeName="SchoolJournalModel.FK_Homework_SubjectID" StoreEntitySet="Homework">
+      <EndProperty Name="Subjects">
+        <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+      </EndProperty>
+      <EndProperty Name="Homework">
+        <ScalarProperty Name="HomeworkID" ColumnName="HomeworkID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Students_PersonID" TypeName="SchoolJournalModel.FK_Students_PersonID" StoreEntitySet="Students">
+      <EndProperty Name="Persons">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <EndProperty Name="Students">
+        <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Teachers_PersonID" TypeName="SchoolJournalModel.FK_Teachers_PersonID" StoreEntitySet="Teachers">
+      <EndProperty Name="Persons">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <EndProperty Name="Teachers">
+        <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Subjects_TeacherID" TypeName="SchoolJournalModel.FK_Subjects_TeacherID" StoreEntitySet="Subjects">
+      <EndProperty Name="Teachers">
+        <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+      </EndProperty>
+      <EndProperty Name="Subjects">
+        <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="TeacherID" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

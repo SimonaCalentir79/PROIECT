@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolJournalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GradeCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Share" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grades">
+    <Key>
+      <PropertyRef Name="GradeID" />
+    </Key>
+    <Property Name="GradeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="SemesterID" Type="int" Nullable="false" />
+    <Property Name="SubjectID" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="DateOfGrade" Type="date" />
+    <Property Name="Observations" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Homework">
+    <Key>
+      <PropertyRef Name="HomeworkID" />
+    </Key>
+    <Property Name="HomeworkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="SubjectID" Type="int" Nullable="false" />
+    <Property Name="DateOfHomework" Type="date" />
+    <Property Name="DueDate" Type="date" />
+    <Property Name="Details" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="PersonEmail" Type="varchar" MaxLength="100" />
+    <Property Name="PersonPhone" Type="varchar" MaxLength="100" />
+    <Property Name="PersonAddress" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Semesters">
+    <Key>
+      <PropertyRef Name="SemesterID" />
+    </Key>
+    <Property Name="SemesterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SemesterNumber" Type="int" Nullable="false" />
+    <Property Name="SchoolYear" Type="char" MaxLength="9" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="SubjectID" />
+    </Key>
+    <Property Name="SubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectName" Type="varchar" MaxLength="200" />
+    <Property Name="LevelYear" Type="int" Nullable="false" />
+    <Property Name="TeacherID" Type="int" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Grades_CategoryID">
+    <End Role="GradeCategory" Type="Self.GradeCategory" Multiplicity="1" />
+    <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GradeCategory">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Grades">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grades_SemesterID">
+    <End Role="Semesters" Type="Self.Semesters" Multiplicity="1" />
+    <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semesters">
+        <PropertyRef Name="SemesterID" />
+      </Principal>
+      <Dependent Role="Grades">
+        <PropertyRef Name="SemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grades_StudentID">
+    <End Role="Students" Type="Self.Students" Multiplicity="1" />
+    <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Grades">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grades_SubjectID">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+    <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="SubjectID" />
+      </Principal>
+      <Dependent Role="Grades">
+        <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Homework_StudentID">
+    <End Role="Students" Type="Self.Students" Multiplicity="1" />
+    <End Role="Homework" Type="Self.Homework" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Homework">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Homework_SubjectID">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+    <End Role="Homework" Type="Self.Homework" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="SubjectID" />
+      </Principal>
+      <Dependent Role="Homework">
+        <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_PersonID">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subjects_TeacherID">
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="Subjects">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teachers_PersonID">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SchoolJournalModelStoreContainer">
+    <EntitySet Name="GradeCategory" EntityType="Self.GradeCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grades" EntityType="Self.Grades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Homework" EntityType="Self.Homework" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Semesters" EntityType="Self.Semesters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Grades_CategoryID" Association="Self.FK_Grades_CategoryID">
+      <End Role="GradeCategory" EntitySet="GradeCategory" />
+      <End Role="Grades" EntitySet="Grades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grades_SemesterID" Association="Self.FK_Grades_SemesterID">
+      <End Role="Semesters" EntitySet="Semesters" />
+      <End Role="Grades" EntitySet="Grades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grades_StudentID" Association="Self.FK_Grades_StudentID">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Grades" EntitySet="Grades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grades_SubjectID" Association="Self.FK_Grades_SubjectID">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Grades" EntitySet="Grades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Homework_StudentID" Association="Self.FK_Homework_StudentID">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Homework" EntitySet="Homework" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Homework_SubjectID" Association="Self.FK_Homework_SubjectID">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Homework" EntitySet="Homework" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_PersonID" Association="Self.FK_Students_PersonID">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subjects_TeacherID" Association="Self.FK_Subjects_TeacherID">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Subjects" EntitySet="Subjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teachers_PersonID" Association="Self.FK_Teachers_PersonID">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

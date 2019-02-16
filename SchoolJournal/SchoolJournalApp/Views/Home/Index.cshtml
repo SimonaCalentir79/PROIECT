@@ -1,9 +1,11 @@
-﻿@model IList<SchoolJournalApp.Models.Person>
+﻿
+@model IList<SchoolJournalModels.Persons>
 
 <div>
-    Number of persons: @Model.Count <br /><br />
+    <br />
+    Number of employees: @Model.Count <br /><br />
 
-    <table style="width:75%">
+    <table style="width:80%">
         <thead>
             <tr>
                 <th>Name</th>
@@ -13,12 +15,11 @@
         <tbody>
             @foreach (var pers in Model)
             {
-            <tr>
-                <td>@pers.PersonName</td>
-                <td>@pers.PersonEmail</td>
-                <td>@Html.ActionLink("Details", "Details", "Home", new { @id = pers.PersonID }, null)</td>
-                <td>@Html.ActionLink("Edit", "Add", "Home", new { @id = pers.PersonID }, null)</td>
-            </tr>
+                <tr>
+                    <td>@pers.PersonName</td>
+                    <td>@pers.PersonEmail</td>
+                    <td>@Html.ActionLink("Details","Details","Home", new { @id = pers.PersonID},null)</td>
+                </tr>
             }
         </tbody>
     </table>

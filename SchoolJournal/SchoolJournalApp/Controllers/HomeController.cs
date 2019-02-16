@@ -1,26 +1,24 @@
-﻿using SchoolJournalApp.Models;
+﻿using SchoolJournalBusinessLogic;
+using SchoolJournalInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SchoolJournalDBAccess;
 
 namespace SchoolJournalApp.Controllers
 {
     public class HomeController : Controller
     {
-        private IPersonManager manager;
+        private IPersonsManager manager;
 
         public HomeController()
         {
-            manager = new PersonManager();
+            manager = new PersonsManager();
         }
-
         public ActionResult Index()
         {
-            IList<Person> persons = manager.GetAll();
-
+            var persons = manager.GetAllPersons();
             return View(persons);
         }
 
@@ -30,26 +28,18 @@ namespace SchoolJournalApp.Controllers
             return View(person);
         }
 
-        [HttpGet]
-        public ActionResult Add(int id)
+        public ActionResult About()
         {
-            if (id == 0)
-                return View();
+            ViewBag.Message = "Your application description page.";
 
-            var person = manager.Get(id);
-            return View(person);
+            return View();
         }
 
-        [HttpPost]
-        public ActionResult Add(Person person)
+        public ActionResult Contact()
         {
-            if (ModelState.IsValid)
-            {
-                //manager.Save(person);
-                return Redirect("Index");
-            }
+            ViewBag.Message = "Your contact page.";
 
-            return View(person);
+            return View();
         }
     }
 }
