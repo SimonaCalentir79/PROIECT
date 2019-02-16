@@ -1,5 +1,6 @@
 ﻿using SchoolJournalBusinessLogic;
 using SchoolJournalInterfaces;
+using SchoolJournalModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,24 @@ namespace SchoolJournalApp.Controllers
         public ActionResult Details(int id)
         {
             var person = manager.Get(id);
+            return View(person);
+        }
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            var person = manager.Get(id);
+            return View(person);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Persons person)
+        {
+            if (ModelState.IsValid)
+            {
+                manager.Save(person);
+                return Redirect("Details");
+            }
             return View(person);
         }
 

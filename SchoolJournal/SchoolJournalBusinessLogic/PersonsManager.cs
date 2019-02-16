@@ -35,7 +35,8 @@ namespace SchoolJournalBusinessLogic
 
         public void Save(Persons persons)
         {
-            throw new NotImplementedException();
+            //db.Persons.Add(persons);
+            db.SaveChanges();
         }
     }
 }
