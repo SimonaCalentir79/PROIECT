@@ -5,6 +5,8 @@
 
     @using (Html.BeginForm())
     {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.PersonID)
         <div class="form-group">
             @Html.LabelFor(m => m.PersonName)
             @Html.TextBoxFor(m => m.PersonName, null, new { @class = "form-control" })
@@ -27,6 +29,6 @@
         </div>
 
         <input type="submit" value="Save" class="btn btn-primary" />
-        @Html.ActionLink("Cancel","Details","Home", new { @id = Model.PersonID }, null);
+        @Html.ActionLink("Cancel","Index","Home");
     }
 </div>

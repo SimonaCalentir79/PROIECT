@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace SchoolJournalBusinessLogic
 {
@@ -27,15 +28,15 @@ namespace SchoolJournalBusinessLogic
 
         public Persons Get(int id)
         {
-            foreach (var pers in db.Persons.Select(p => p).ToList())
+            foreach (var pers in this.GetAllPersons())
                 if (pers.PersonID == id)
                     return pers;
             return null;
         }
 
-        public void Save(Persons persons)
+        public void Save(Persons person)
         {
-            //db.Persons.Add(persons);
+            db.Entry(person).State = EntityState.Modified;
             db.SaveChanges();
         }
     }

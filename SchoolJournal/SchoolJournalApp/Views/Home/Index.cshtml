@@ -3,24 +3,30 @@
 
 <div>
     <br />
-    Number of employees: @Model.Count <br /><br />
-
+    Number of employees: @Model.Count <br />
+    <br />
     <table style="width:80%">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Email</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Address</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var pers in Model)
             {
-                <tr>
-                    <td>@pers.PersonName</td>
-                    <td>@pers.PersonEmail</td>
-                    <td>@Html.ActionLink("Edit","Details","Home", new { @id = pers.PersonID},null)</td>
-                </tr>
-            }
+            <tr>
+                <td>@pers.PersonName</td>
+                <td>@pers.PersonEmail</td>
+                <td>@pers.PersonPhone</td>
+                <td>@pers.PersonAddress</td>
+                <td>@Html.ActionLink("Details", "Details", "Home", new { @id = pers.PersonID }, null)</td>
+                <td>@Html.ActionLink("Update", "Update", "Home", new { @id = pers.PersonID }, null)</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Home", new { @id = pers.PersonID }, null)</td>
+            </tr>
+                }
         </tbody>
     </table>
 </div>

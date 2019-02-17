@@ -20,8 +20,13 @@ namespace SchoolJournalModels
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int PersonID { get; set; }
+
+        [Required]
         public string PersonName { get; set; }
+
+        [EmailAddress]
         public string PersonEmail { get; set; }
+
         public string PersonPhone { get; set; }
         public string PersonAddress { get; set; }
 

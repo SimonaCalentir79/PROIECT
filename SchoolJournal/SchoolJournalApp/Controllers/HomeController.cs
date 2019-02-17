@@ -4,6 +4,7 @@ using SchoolJournalModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -17,6 +18,7 @@ namespace SchoolJournalApp.Controllers
         {
             manager = new PersonsManager();
         }
+
         public ActionResult Index()
         {
             var persons = manager.GetAllPersons();
@@ -32,17 +34,26 @@ namespace SchoolJournalApp.Controllers
         [HttpGet]
         public ActionResult Update(int id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             var person = manager.Get(id);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
             return View(person);
         }
 
         [HttpPost]
-        public ActionResult Update(Persons person)
+        [ValidateAntiForgeryToken]
+        public ActionResult Update([Bind(Include ="PersonID,PersonName,PersonEmail,PersonPhone,PersonAddress")]Persons person)
         {
             if (ModelState.IsValid)
             {
                 manager.Save(person);
-                return Redirect("Details");
+                return RedirectToAction("Index");
             }
             return View(person);
         }
