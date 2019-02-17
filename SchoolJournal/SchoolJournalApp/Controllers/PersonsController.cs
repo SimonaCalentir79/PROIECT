@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -20,10 +21,25 @@ namespace SchoolJournalApp.Controllers
             manager = new PersonsManager();
         }
 
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(manager.GetAllPersons());
+        //}
+
+        public ActionResult Index(string option, string search)
         {
-            var persons = manager.GetAllPersons();
-            return View(persons);
+            if (option == "Name")
+            {
+                return View(manager.GetByName(search));
+            }
+            else if (option == "Address")
+            {
+                return View(manager.GetByAddress(search));
+            }
+            else
+            {
+                return View(manager.GetAllPersons());
+            }
         }
 
         public ActionResult Details(int id)

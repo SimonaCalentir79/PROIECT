@@ -23,16 +23,21 @@ namespace SchoolJournalBusinessLogic
 
         public IList<Persons> GetAllPersons()
         {
-            return db.Persons.Select(p => p).ToList(); 
+            return db.Persons.Select(p => p).ToList();
+        }
+
+        public IList<Persons> GetByName(string name)
+        {
+            return db.Persons.Where(p => p.PersonName.Contains(name) || name == null).ToList();
+        }
+
+        public IList<Persons> GetByAddress(string address)
+        {
+            return db.Persons.Where(p => p.PersonAddress.Contains(address) || address == null).ToList();
         }
 
         public Persons Get(int id)
         {
-            //foreach (var pers in this.GetAllPersons())
-            //    if (pers.PersonID == id)
-            //        return pers;
-            //return null;
-
             return db.Persons.Find(id);
         }
 

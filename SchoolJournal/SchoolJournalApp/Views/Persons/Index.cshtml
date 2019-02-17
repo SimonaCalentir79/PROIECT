@@ -2,43 +2,48 @@
 @model IList<SchoolJournalModels.Persons>
 
 <br />
-<h2>PERSONS</h2>
+<h2>PERSONS (@Model.Count records)</h2>
 <br />
-    Number of persons: @Model.Count <br />
-    <br />
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>E-mail</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var pers in Model)
-                {
-                    <tr>
-                        <td>@pers.PersonName</td>
-                        <td>@pers.PersonEmail</td>
-                        <td>@pers.PersonPhone</td>
-                        <td>@pers.PersonAddress</td>
-                        <td>@Html.ActionLink("Details", "Details", "Persons", new { @id = pers.PersonID }, null)</td>
-                        <td>@Html.ActionLink("Update", "Update", "Persons", new { @id = pers.PersonID }, null)</td>
-                        <td>@Html.ActionLink("Delete", "Delete", "Persons", new { @id = pers.PersonID }, null)</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
     <div>
-        <br />
         <p>
-            @Html.ActionLink("Add person", "Add", "Persons")
+            <strong>@Html.ActionLink("ADD NEW PERSON", "Add", "Persons")</strong>
         </p>
     </div>
+<br />
+    <div>
+        @using (Html.BeginForm("Index", "Persons", FormMethod.Get))
+        {
+            <b>Search option: </b>@Html.RadioButton("option", "Name")<text> Name </text> @Html.RadioButton("option", "Address")<text> Address </text> @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
+        }
+    </div>
+<br />
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pers in Model)
+            {
+                <tr>
+                    <td>@pers.PersonName</td>
+                    <td>@pers.PersonEmail</td>
+                    <td>@pers.PersonPhone</td>
+                    <td>@pers.PersonAddress</td>
+                    <td>@Html.ActionLink("Details", "Details", "Persons", new { @id = pers.PersonID }, null)</td>
+                    <td>@Html.ActionLink("Edit", "Update", "Persons", new { @id = pers.PersonID }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Persons", new { @id = pers.PersonID }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 

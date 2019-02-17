@@ -11,6 +11,10 @@ namespace SchoolJournalInterfaces
     {
         IList<Persons> GetAllPersons();
 
+        IList<Persons> GetByName(string name);
+
+        IList<Persons> GetByAddress(string address);
+
         Persons Get(int id);
 
         void Save(Persons person);

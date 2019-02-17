@@ -1,3 +1,6 @@
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\SchoolJournalApp.dll.config
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\SchoolJournalApp.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\SchoolJournalApp.pdb
@@ -7,12 +10,9 @@ D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bi
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\csi.exe
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\csi.exe.config
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\csi.rsp
-D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.CSharp.Core.targets
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll

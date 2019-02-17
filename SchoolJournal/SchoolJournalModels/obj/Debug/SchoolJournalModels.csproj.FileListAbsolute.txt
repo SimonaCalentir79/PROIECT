@@ -1,5 +1,6 @@
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\SchoolJournalModels.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\SchoolJournalModels.pdb
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csprojAssemblyReference.cache
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csproj.CoreCompileInputs.cache
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.pdb
