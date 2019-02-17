@@ -1,7 +1,7 @@
 ﻿@model SchoolJournalModels.Persons
 
 <div>
-    <h3>Add new person</h3>
+    <h2>UPDATE</h2>
 
     @using (Html.BeginForm())
     {
@@ -29,6 +29,6 @@
         </div>
 
         <input type="submit" value="Save" class="btn btn-primary" />
-        @Html.ActionLink("Cancel","Index","Home");
+        @Html.ActionLink("Cancel","Index","Persons");
     }
 </div>

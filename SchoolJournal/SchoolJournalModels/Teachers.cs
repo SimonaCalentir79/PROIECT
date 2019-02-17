@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolJournalModels
 {
-    public class Teachers
+    public class Teachers:Persons
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Teachers()

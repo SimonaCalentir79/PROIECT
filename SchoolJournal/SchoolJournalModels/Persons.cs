@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -19,15 +20,21 @@ namespace SchoolJournalModels
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
+        [DisplayName("ID ")]
         public int PersonID { get; set; }
 
         [Required]
+        [DisplayName("Name ")]
         public string PersonName { get; set; }
 
         [EmailAddress]
+        [DisplayName("E-mail ")]
         public string PersonEmail { get; set; }
 
+        [DisplayName("Phone no. ")]
         public string PersonPhone { get; set; }
+
+        [DisplayName("Address ")]
         public string PersonAddress { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,32 +1,40 @@
-﻿
-@model IList<SchoolJournalModels.Persons>
+﻿@{
+    ViewBag.Title = "Home Page";
+}
 
-<div>
-    <br />
-    Number of employees: @Model.Count <br />
-    <br />
-    <table style="width:80%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>E-mail</th>
-                <th>Phone</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var pers in Model)
-            {
-            <tr>
-                <td>@pers.PersonName</td>
-                <td>@pers.PersonEmail</td>
-                <td>@pers.PersonPhone</td>
-                <td>@pers.PersonAddress</td>
-                <td>@Html.ActionLink("Details", "Details", "Home", new { @id = pers.PersonID }, null)</td>
-                <td>@Html.ActionLink("Update", "Update", "Home", new { @id = pers.PersonID }, null)</td>
-                <td>@Html.ActionLink("Delete", "Delete", "Home", new { @id = pers.PersonID }, null)</td>
-            </tr>
-                }
-        </tbody>
-    </table>
+<div class="jumbotron">
+    <p style="text-align:center">
+        <img src="~/images/coperta.jpg" alt="coperta.jpg" class="img-rounded" style="width:100%;height:100%"/>
+    </p>
 </div>
+
+@*<div class="row">
+    <div class="col-md-3">
+        <h2>Nomenclatoare</h2>
+        <p>
+            ...
+        </p>
+        <p>@Html.ActionLink("Persons", "Index", "Persons")</p>
+    </div>
+    <div class="col-md-3">
+        <h2>In lucru</h2>
+        <p>
+            ...
+        </p>
+        <p><a class="btn btn-default" href="">No link &raquo;</a></p>
+    </div>
+    <div class="col-md-3">
+        <h2>In lucru</h2>
+        <p>
+            ...
+        </p>
+        <p><a class="btn btn-default" href="">No link &raquo;</a></p>
+    </div>
+    <div class="col-md-3">
+        <h2>In lucru</h2>
+        <p>
+            ...
+        </p>
+        <p><a class="btn btn-default" href="">No link &raquo;</a></p>
+    </div>
+</div>*@

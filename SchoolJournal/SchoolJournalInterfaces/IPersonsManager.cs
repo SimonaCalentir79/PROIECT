@@ -9,10 +9,14 @@ namespace SchoolJournalInterfaces
 {
     public interface IPersonsManager
     {
-        void Save(Persons persons);
+        IList<Persons> GetAllPersons();
 
         Persons Get(int id);
 
-        IList<Persons> GetAllPersons();
+        void Save(Persons person);
+
+        void Delete(int id);
+
+        void Add(Persons person);
     }
 }
