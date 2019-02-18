@@ -49,7 +49,6 @@ namespace SchoolJournalBusinessLogic
 
         public void Delete(int id)
         {
-            //db.Entry(person).State = EntityState.Deleted;
             Persons person = this.Get(id);
             db.Persons.Remove(person);
             db.SaveChanges();

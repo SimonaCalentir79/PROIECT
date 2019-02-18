@@ -3,6 +3,8 @@ D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusine
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\SchoolJournalBusinessLogic.pdb
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\EntityFramework.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\PagedList.dll
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\PagedList.Mvc.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\SchoolJournalDataAccess.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\SchoolJournalInterfaces.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\SchoolJournalModels.dll
@@ -12,6 +14,8 @@ D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusine
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\SchoolJournalModels.pdb
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\EntityFramework.xml
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\PagedList.xml
+D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\bin\Debug\PagedList.Mvc.xml
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\obj\Debug\SchoolJournalBusinessLogic.csprojAssemblyReference.cache
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\obj\Debug\SchoolJournalBusinessLogic.csproj.CoreCompileInputs.cache
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalBusinessLogic\obj\Debug\SchoolJournalBusinessLogic.csproj.CopyComplete

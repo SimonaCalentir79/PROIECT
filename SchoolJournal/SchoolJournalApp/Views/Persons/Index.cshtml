@@ -1,5 +1,7 @@
 ﻿
-@model IList<SchoolJournalModels.Persons>
+@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<SchoolJournalModels.Persons>
 
 <br />
 <h2>PERSONS (@Model.Count records)</h2>
@@ -13,7 +15,10 @@
     <div>
         @using (Html.BeginForm("Index", "Persons", FormMethod.Get))
         {
-            <b>Search option: </b>@Html.RadioButton("option", "Name")<text> Name </text> @Html.RadioButton("option", "Address")<text> Address </text> @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
+            <b>Search option: </b>
+                @Html.RadioButton("option", "Name")<text> Name </text> 
+                @Html.RadioButton("option", "Address")<text> Address </text> 
+                @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
         }
     </div>
 <br />
@@ -31,19 +36,33 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var pers in Model)
+            @if (Model.Count == 0)
             {
                 <tr>
-                    <td>@pers.PersonName</td>
-                    <td>@pers.PersonEmail</td>
-                    <td>@pers.PersonPhone</td>
-                    <td>@pers.PersonAddress</td>
-                    <td>@Html.ActionLink("Details", "Details", "Persons", new { @id = pers.PersonID }, null)</td>
-                    <td>@Html.ActionLink("Edit", "Update", "Persons", new { @id = pers.PersonID }, null)</td>
-                    <td>@Html.ActionLink("Delete", "Delete", "Persons", new { @id = pers.PersonID }, null)</td>
+                    <td colspan="7">
+                        <i>Records not found</i>
+                    </td>
                 </tr>
+            }
+            else
+            {
+                foreach (var pers in Model)
+                {
+                    <tr>
+                        <td>@pers.PersonName</td>
+                        <td>@pers.PersonEmail</td>
+                        <td>@pers.PersonPhone</td>
+                        <td>@pers.PersonAddress</td>
+                        <td>@Html.ActionLink("Details", "Details", "Persons", new { @id = pers.PersonID }, null)</td>
+                        <td>@Html.ActionLink("Edit", "Update", "Persons", new { @id = pers.PersonID }, null)</td>
+                        <td>@Html.ActionLink("Delete", "Delete", "Persons", new { @id = pers.PersonID }, null)</td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
+</div>
+<div>
+    @Html.PagedListPager(Model, pageNumber => Url.Action("Index", new {pageNumber, option=Request.QueryString["option"],search=Request.QueryString["search"]}))
 </div>
 

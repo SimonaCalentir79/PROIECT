@@ -1,4 +1,5 @@
-﻿using SchoolJournalBusinessLogic;
+﻿using PagedList;
+using SchoolJournalBusinessLogic;
 using SchoolJournalInterfaces;
 using SchoolJournalModels;
 using System;
@@ -26,19 +27,19 @@ namespace SchoolJournalApp.Controllers
         //    return View(manager.GetAllPersons());
         //}
 
-        public ActionResult Index(string option, string search)
+        public ActionResult Index(string option, string search, int? pageNumber)
         {
             if (option == "Name")
             {
-                return View(manager.GetByName(search));
+                return View(manager.GetByName(search).ToPagedList(pageNumber ?? 1, 5));
             }
             else if (option == "Address")
             {
-                return View(manager.GetByAddress(search));
+                return View(manager.GetByAddress(search).ToPagedList(pageNumber ?? 1, 5));
             }
             else
             {
-                return View(manager.GetAllPersons());
+                return View(manager.GetAllPersons().ToPagedList(pageNumber ?? 1, 5));
             }
         }
 
@@ -51,10 +52,6 @@ namespace SchoolJournalApp.Controllers
         [HttpGet]
         public ActionResult Update(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             var person = manager.Get(id);
             if (person == null)
             {
@@ -78,11 +75,8 @@ namespace SchoolJournalApp.Controllers
         [HttpGet]
         public ActionResult Delete(int id, bool? saveChangesError=false)
         {
-            if (id == null)
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             if (saveChangesError.GetValueOrDefault())
                 ViewBag.ErrorMessage = "Delete failed! Try again or see your sysadmin!";
-            //var person = manager.Get(id);
             Persons person = manager.Get(id);
             if (person == null)
             {
