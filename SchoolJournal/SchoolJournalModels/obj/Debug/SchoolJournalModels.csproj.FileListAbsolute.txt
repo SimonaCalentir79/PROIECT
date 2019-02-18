@@ -9,14 +9,3 @@ D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csproj.CopyComplete
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.dll
 D:\_DOCUMENTE&ALTELE\_WANTSOME\GhitHub\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.pdb
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\SchoolJournalModels.dll
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\SchoolJournalModels.pdb
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\PagedList.dll
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\PagedList.Mvc.dll
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\PagedList.xml
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\bin\Debug\PagedList.Mvc.xml
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csprojAssemblyReference.cache
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csproj.CoreCompileInputs.cache
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.csproj.CopyComplete
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.dll
-C:\Users\mdanca\Documents\Wantsome\SchoolJ\PROIECT\SchoolJournal\SchoolJournalModels\obj\Debug\SchoolJournalModels.pdb
